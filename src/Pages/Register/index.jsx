@@ -15,7 +15,7 @@ function RegisterU() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await registerUser;
+            await registerUser();
             setIsSuccess(true);
         }
         catch (error) {
@@ -28,7 +28,7 @@ function RegisterU() {
           alert('¡Usuacrio creado!');
           navigate('/'); // Redirige al usuario a la página de inicio
         }
-      }, [isSuccess, navigate]);
+    }, [isSuccess, navigate]);
 
   return (
     <>

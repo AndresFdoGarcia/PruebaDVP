@@ -95,8 +95,7 @@ export const AuthContextProvider = ({children}) => {
     const [allUsers,setAllUsers] = useState([]);
 
     const getAllUsers = async(e)=>{        
-        const response = await getRequest(`${baseUrl}/AllUsers`);
-        console.log(response);
+        const response = await getRequest(`${baseUrl}/AllUsers`);        
         setAllUsers(JSON.stringify(response));        
     }
 
