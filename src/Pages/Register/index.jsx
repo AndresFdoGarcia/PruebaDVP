@@ -56,7 +56,7 @@ function RegisterU() {
                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
                         <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="John"
                         onChange={(e)=>
-                            UpdateInfo({...registerInfo, FirstName: e.target.value})}></input>
+                            UpdateInfo({...registerInfo, FirstName: e.target.value})} required pattern="[A-Za-z\s]+"></input>
                     </div>
                 </div>
                 <div className="w-1/2 px-3">
@@ -65,7 +65,7 @@ function RegisterU() {
                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
                             <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="Smith"
                             onChange={(e)=>
-                                UpdateInfo({...registerInfo, LastName: e.target.value})}></input>
+                                UpdateInfo({...registerInfo, LastName: e.target.value})} required pattern="[A-Za-z\s]+"></input>
                         </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ function RegisterU() {
                     <div className="flex">
                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
                             <select className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 bg-white text-gray-700 outline-none focus:border-indigo-500"
-                                onChange={(e) => UpdateInfo({ ...registerInfo, IdType: e.target.value })}>
+                                onChange={(e) => UpdateInfo({ ...registerInfo, IdType: e.target.value })} required>
                                 <option value="" disabled>Select</option>
                                 <option value="CC">CC</option>
                                 <option value="PAS">PAS</option>
@@ -91,7 +91,7 @@ function RegisterU() {
                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
                             <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="Smith"
                             onChange={(e)=>
-                                UpdateInfo({...registerInfo, IdNumber: e.target.value})}></input>
+                                UpdateInfo({...registerInfo, IdNumber: e.target.value})} required pattern="[A-Za-z0-9]+" minlength="8" maxlength="12"></input>
                         </div>
                 </div>
                 
@@ -104,7 +104,7 @@ function RegisterU() {
                                 <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                                 <input type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com"
                                 onChange={(e)=>
-                                    UpdateInfo({...registerInfo, Email: e.target.value})}></input>
+                                    UpdateInfo({...registerInfo, Email: e.target.value})} required></input>
                             </div>
                         </div>
             </div>
@@ -116,7 +116,7 @@ function RegisterU() {
                         <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
                         <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="johnsmith41"
                         onChange={(e)=>
-                            UpdateInfo({...registerInfo, UserName: e.target.value})}></input>
+                            UpdateInfo({...registerInfo, UserName: e.target.value})} required pattern="[A-Za-z0-9]+"></input>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@ function RegisterU() {
                              <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
                             <input type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-300 outline-none focus:border-indigo-500" placeholder="************"
                             onChange={(e)=>
-                                UpdateInfo({...registerInfo, Password: e.target.value})}></input>
+                                UpdateInfo({...registerInfo, Password: e.target.value})} required></input>
                         </div>
                 </div>
             </div>            
